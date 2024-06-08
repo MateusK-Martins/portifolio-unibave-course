@@ -77,11 +77,13 @@ header{
 
 #search{
     position: absolute;
-    top: 10%;
+    top: 16%;
     left: 80%;
+    height: 50px;
+    width: 150px;
 }
 #search>h2{
     position: absolute;
-    top: 10%;
-    left: 50%;
+    top: -10%;
+    left: -60%;
 }
