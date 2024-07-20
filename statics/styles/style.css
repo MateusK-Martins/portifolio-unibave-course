@@ -1,11 +1,8 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
-
 html,body{
     height: 100vh;
     width: 100vw;
-
     overflow-x: hidden;
 }
 
@@ -13,350 +10,273 @@ html,body{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: Sora;
 }
 
 body{
     display: flex;
-    flex-flow: column;
+    flex-flow: column nowrap;
     align-items: center;
 }
 
-/*
-    settings header
-*/
-
 header{
-
-    height: 70px;
+    height: 100px;
     width: 100%;
 
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    justify-content: center;
+
+    z-index: 2;
 }
 
-/*
-    settings header > ul
-*/
+/* lista geral */
 
-header>ul{
+header>:first-child{
+    height: 100%;
+    width: 100%;
+    
     display: flex;
     flex-flow: row;
     align-items: center;
-    justify-content: center;
-    margin: 0 20px;
-    list-style-type: none;
+    justify-content:  space-around;
 }
 
-/*
-    settings header > logo
-*/
 
-header>:first-child>:first-child{
-    height: 50px;
-    width: 50px;
-
-    background: url("../imgs/personal.png") no-repeat center center;
-}
-
-/*
-    settings header > name
-*/
-
-header>:first-child>:last-child{
-    font-size: 1.5em;
-}
-
-/*
-    settings curriculumn
-*/
-
-header>:last-child{
-    height: 40px;
-    width: 100px;
+header>:first-child>li{
+    height: 100%;
+    width: 50%;
 
     display: flex;
-    flex-flow: row no-wrap;
+    display: flex;
+    flex-flow: row nowrap;
     align-items: center;
-    justify-content: center;
-
-    font-size: .7em;
-
-    background-color: black;
-    border: 3px solid rgb(29, 29, 29);
-    border-radius: 5px;
-
+    justify-content:  space-around;
 }
 
-/*
-    settings curriculumn > text
-*/
 
-header>:last-child>:first-child{
-    font-size: 1em;
-    color: white;
-}
+/* titulo e logo */
 
-/*
-    settings curriculumn > icon
-*/
 
-header>:last-child>:last-child{
-    height: 10px;
-    width: 10px;
-
-    margin-left: 5px;
-
-    background: url(../imgs/downg.png) no-repeat center center;
-}
-
-/* 
-    curriculumn hover
-*/
-
-header>:last-child:hover{
-    animation: dowload 3s infinite;
-}
-
-@keyframes dowload {
-    0%,100%{
-
-    }
-    50%{
-        transform: rotate(360deg);
-
-        height: 50px;
-        width: 50px;
-
-        border-radius: 50%;
-    }
-    75%{
-        transform: rotate(760deg);
-
-        height: 50px;
-        width: 50px;
-
-        border-radius: 50%;
-    }
-}
-
-/* 
-    settings main
-*/
-
-main{
+header>:first-child>:first-child{
     height: 100%;
-    width: 90%;
-}
-
-/* 
-    settings main > all sections
-*/
-
-main>section{
-    height: 596px;
     width: 100%;
 
     display: flex;
-    flex-flow: column;
+    display: flex;
+    flex-flow: row nowrap;
     align-items: center;
-    justify-content: center;
+    justify-content:  space-around;
+}
 
-    z-index: 2;
+#logo{
+    height: 50px;
+    width: 50px;
 
-    margin: 50px 0;
+    background: url(../imgs/logo\ 1.png) no-repeat center center;
+    background-size: cover;
+}
+
+
+/* lista de itens central */
+
+
+header>:first-child>:nth-child(2)>:first-child{
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content:  space-around;
+}
+
+li{
+    list-style-type: none;
+}
+
+
+/* botao curriculo */
+
+
+header>:first-child>:last-child>:first-child{
+    height: 50px;
+    width: 150px;
+
+    display: flex;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content:  center;
+
+    background-color: black;
+}
+
+header>:first-child>:last-child>:first-child:active{
+    animation: curriculo 5s linear infinite alternate;
+}
+
+header>:first-child>:last-child>:first-child>:first-child{
+    color: white;
+    text-decoration: none;
+    
+    font-size: 1rem;
+}
+
+#dowload{
+    height: 10px;
+    width: 10px;
+
+    margin: 3px;
 
     background-color: aliceblue;
+    animation: curriculo 5s linear infinite;
 }
 
-/* 
-    settings main > first section > h1
-*/
-
-main>:nth-child(1)>:first-child{
-    font-weight: 200;
-    font-size: 2em;
+@keyframes curriculo {
+    0%,100%{
+        
+    }
+    50%{
+        transform: rotateZ(1000deg);
+        border-radius: 50%;
+    }
 }
 
-/* 
-    settings main > first section > p
-*/
 
-main>:nth-child(1)>:nth-child(2){
-    font-size: 1em;
+/* main settings and section */
 
-    font-weight: 300;
 
-    color: rgb(83, 136, 136);
-
-    margin-top: 30px;
-}
-
-/* 
-    settings main > first section > social meadias
-*/
-
-main>:nth-child(1)>:nth-child(3){
-    position: relative;
-    top: 25%;
-
-    height: 90%;
+main{
+    height: 100%;
     width: 100%;
 
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
-
-    list-style-type: none;
+    align-items: center;
 }
 
-/* 
-    settings main > first section > social meadias > Linkedin
-*/
-
-main>:nth-child(1)>:nth-child(3)>:first-child{
-    height: 33%;
+main>section{
+    height: 300px;
     width: 90%;
 
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: left;
-
-    color: white;
-
-    background-color: black;
-    border: 5px solid rgb(29, 18, 185);
-    border-radius: 10px;
+    padding: 20px;
+    margin: 150px 0;
 }
 
-/* 
-    settings main > first section > social meadias > Instagram
-*/
 
-main>:nth-child(1)>:nth-child(3)>:nth-child(2){
-    height: 33%;
-    width: 90%;
+/* first section text */
+
+
+main>:first-child>:first-child{
+    height: 250px;
+    width: 400px;
 
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     align-items: center;
-    justify-content: left;
-
-    color: white;
-
-    background-color: black;
-    border: 5px solid rgb(185, 132, 18);
-    border-radius: 10px;
+    gap: 30px;
 }
 
-/* 
-    settings main > first section > social meadias > Facebook
-*/
-
-main>:nth-child(1)>:nth-child(3)>:nth-child(3){
-    height: 33%;
-    width: 90%;
-
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: left;
-
-    color: white;
-
-    background-color: black;
-    border: 5px solid rgb(18, 124, 185);
-    border-radius: 10px;
-}
-
-/* 
-    settings main > first section > social meadias > all links
-*/
-
-main>:nth-child(1)>:nth-child(3)>li>a{
-    text-decoration: none;
-    color: white;
-}
-
-/* 
-    settings main > first section > social meadias hover
-*/
-
-main>:nth-child(1)>:nth-child(3)>li:hover{
-    background-color: white;
-    border: 5px solid rgb(163, 255, 163);
-    box-shadow: 0px 10px 10px black;
-    transform: scale(1.1);
-    transition: .5s;
-}
-main>:nth-child(1)>:nth-child(3)>li:hover>a{
+main>:first-child>:first-child>:first-child{
     color: black;
-    transition: .5s;
+    font-weight: 100;
+
+    font-size: 3rem;
+
 }
 
-/* 
-    settings main > first section > banner
-*/
+main>:first-child>:first-child>:first-child>:last-child{
+    color: green;
+    font-weight: 900;
+}
 
-main>:nth-child(1)>:last-child{
+main>:first-child>:first-child>:last-child{
+    color: black;
+    font-weight: 100;
+
+    font-size: 1rem;
+
+}
+
+/* Banner */
+
+
+main>:first-child>:last-child{
     position: relative;
-    top: -30%;
+    top: -90%;
+    left: 20%;
 
-    height: 100%;
+
+    height: 500px;
     width: 100%;
 
-    opacity: 0.6;
+    z-index: -1;
 
-    background: url(../imgs/Banner.png) no-repeat center center;
+    opacity: 0.7;
+
+    background: url(../imgs/Group\ 1000015839.png) no-repeat center center;
+
     background-size: contain;
 }
 
-#skills>ul{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+/* section 2 */
 
+main>:nth-child(2)>:first-child{
+    text-align: center;
+    font-size: 3rem;
+}
+
+main>:nth-child(2)>.content{
     height: 100%;
     width: 100%;
 
-    padding: 20px;
+    margin: 50px 0;
 
-    list-style-type: none;
-}
-
-#skills>ul>li{
     display: flex;
-    flex-flow: column;
+    flex-flow: row wrap;
     align-items: center;
-    justify-content: center;
-
-    flex-grow: 1;
-
-    height: 300px;
-    width: 100px;
-
-    margin: 15px;
-
-    border: 3px solid black;
-    border-radius: 5px;
-}
-li>#icon{
-    height: 100px;
-    width: 90%;
+    justify-content: space-between;
 }
 
-#html>#icon{
-    background: url(../imgs/svgs/html.svg) no-repeat center center;
+.hab{
+    height: 200px;
+    width: 150px;
+
+    padding: 10px;
+    margin: 10px;
+
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    border: solid black;
+    border-radius: 10px;
+}
+
+.hab>.img{
+    height: 70%;
+    width: 100%;
+}
+
+main>:nth-child(2)>.content>:nth-child(1)>.img{
+    background: url(../imgs/logo-html5.svg) no-repeat center center;
     background-size: cover;
 }
-#css>#icon{
-    background: url(../imgs/svgs/css.svg) no-repeat center center;
+main>:nth-child(2)>.content>:nth-child(2)>.img{
+    background: url(../imgs/logo-css3.svg) no-repeat center center;
     background-size: cover;
 }
-#python>#icon{
-    background: url(../imgs/svgs/python.svg) no-repeat center center;
+main>:nth-child(2)>.content>:nth-child(3)>.img{
+    background: url(../imgs/python-fill-svgrepo-com.svg) no-repeat center center;
+    background-size: cover;
+}
+main>:nth-child(2)>.content>:nth-child(4)>.img{
+    background: url(../imgs/js-svgrepo-com.svg) no-repeat center center;
+    background-size: cover;
+}
+main>:nth-child(2)>.content>:nth-child(5)>.img{
+    background: url(../imgs/ai-svgrepo-com.svg) no-repeat center center;
     background-size: cover;
 }
