@@ -99,7 +99,7 @@ li{
 /* botao curriculo */
 
 
-header>:first-child>:last-child>:first-child{
+#curriculo_menu{
     height: 50px;
     width: 150px;
 
@@ -108,6 +108,8 @@ header>:first-child>:last-child>:first-child{
     flex-flow: row nowrap;
     align-items: center;
     justify-content:  center;
+
+    transition: .5s;
 
     background-color: black;
 }
@@ -156,29 +158,92 @@ main{
     align-items: center;
 }
 
+#soc_midia{
+    position: fixed;
+    top: 15%;
+    left: 0%;
+
+    height: 50px;
+    width: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: .5s;
+    
+    background-color: black;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+#midia_link{
+    height: 40px;
+    width: 40px;
+
+    opacity: 0;
+
+    margin: 0 10px;
+
+    background-size: cover;
+
+    border-radius: 10px;
+} 
+
+#soc_midia:hover{
+    width: 200px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+} #soc_midia:hover>a>#midia_link{
+    opacity: 1;
+    transition: 2s;
+} #midia_link:hover{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 5px 50px white;
+    transition: .3s;
+}
+
+
+/* all section settings */
+
 main>section{
     height: 300px;
-    width: 90%;
+    width: 100%;
 
-    padding: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: start;
+
     margin: 150px 0;
 }
 
 
 /* first section text */
 
-
-main>:first-child>:first-child{
-    height: 250px;
-    width: 400px;
+#sec_me{
+    height: 400px;
+    width: 90%;
 
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
+    align-items: start;
+
+    margin: 150px 0;
+}
+
+#sec_me.content{
+    height: 250px;
+    width: 80%;
+
+    padding: 10px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: start;
     gap: 30px;
 }
 
-main>:first-child>:first-child>:first-child{
+#title_page1{
     color: black;
     font-weight: 100;
 
@@ -186,48 +251,59 @@ main>:first-child>:first-child>:first-child{
 
 }
 
-main>:first-child>:first-child>:first-child>:last-child{
+#title_page1>:last-child{
     color: green;
     font-weight: 900;
 }
 
-main>:first-child>:first-child>:last-child{
-    color: black;
-    font-weight: 100;
-
-    font-size: 1rem;
-
+#text_page1{
+    font-size: 1.5em;
 }
 
-/* Banner */
+/* banner */
 
-
-main>:first-child>:last-child{
+#ban_dad{
     position: relative;
-    top: -90%;
-    left: 20%;
-
+    top: -50%;
+    left: 0%;
 
     height: 500px;
     width: 100%;
 
+    display: flex;
+    align-items: baseline;
+}
+
+#banner{
+    height: 100%;
+    width: 100%;
+
     z-index: -1;
 
-    opacity: 0.7;
+    opacity: 0.8;
 
-    background: url(../imgs/Group\ 1000015839.png) no-repeat center center;
-
-    background-size: contain;
+    background: no-repeat center center;
+    background-size: cover;
 }
 
 /* section 2 */
 
-main>:nth-child(2)>:first-child{
-    text-align: center;
+#sec_skills{
+    height: 600px;
+    width: 90%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    margin: 150px 0;
+}
+
+#sec_skills>:first-child{
     font-size: 3rem;
 }
 
-main>:nth-child(2)>.content{
+#sec_skills>.content{
     height: 100%;
     width: 100%;
 
@@ -236,7 +312,17 @@ main>:nth-child(2)>.content{
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    justify-content: space-between;
+}
+
+.content>section{
+    width: 100%;
+
+    margin-top: 50px;
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .hab{
@@ -247,12 +333,14 @@ main>:nth-child(2)>.content{
     margin: 10px;
 
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     align-items: center;
     justify-content: space-between;
 
     border: solid black;
     border-radius: 10px;
+
+    transition: .5s;
 }
 
 .hab>.img{
@@ -260,23 +348,309 @@ main>:nth-child(2)>.content{
     width: 100%;
 }
 
-main>:nth-child(2)>.content>:nth-child(1)>.img{
+#sec_skills>.content>:nth-child(1)>:nth-child(1)>.img{
     background: url(../imgs/logo-html5.svg) no-repeat center center;
     background-size: cover;
 }
-main>:nth-child(2)>.content>:nth-child(2)>.img{
+#sec_skills>.content>:nth-child(1)>:nth-child(2)>.img{
     background: url(../imgs/logo-css3.svg) no-repeat center center;
     background-size: cover;
 }
-main>:nth-child(2)>.content>:nth-child(3)>.img{
+#sec_skills>.content>:nth-child(1)>:nth-child(3)>.img{
     background: url(../imgs/python-fill-svgrepo-com.svg) no-repeat center center;
     background-size: cover;
 }
-main>:nth-child(2)>.content>:nth-child(4)>.img{
+#sec_skills>.content>:nth-child(2)>:nth-child(1)>.img{
     background: url(../imgs/js-svgrepo-com.svg) no-repeat center center;
     background-size: cover;
 }
-main>:nth-child(2)>.content>:nth-child(5)>.img{
+#sec_skills>.content>:nth-child(2)>:nth-child(2)>.img{
     background: url(../imgs/ai-svgrepo-com.svg) no-repeat center center;
     background-size: cover;
+}
+#sec_skills>.content>:nth-child(2)>:nth-child(3)>.img{
+    background: url(../imgs/crab-svgrepo-com.svg) no-repeat center center;
+    background-size: cover;
+}
+
+/* third section experience */
+
+#my_exp{
+    height: auto;
+    padding: 50px 10px;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    margin: 150px 0 0 0;
+
+    background-color: black;
+}
+
+/* text settings all */
+
+.title_page3{
+    margin: 50px 0;
+} .title_page3>h1{
+    color: rgb(194, 194, 194);
+    font-size: 3em;
+    font-weight: 100;
+} .title_page3>h1>strong{
+    color: white;
+    font-weight: 900;
+}
+
+#my_exp>.card{
+    height: 100px;
+    width: 80%;
+
+    padding: 10px;
+
+    display: flex;
+    flex-flow: column nowrap;
+
+    margin: 10px 0;
+
+    transition: all .5s, opacity 1s;
+
+    border: 2px solid rgba(255, 255, 255, 0.733);
+    border-radius: 5px;
+}
+
+#my_exp>.card:hover{
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.514);
+}
+#my_exp>.card:hover>.text_page3{
+    display: block;
+    opacity: 1;
+}
+
+#my_exp>.card>section{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    margin: 10px;
+}
+
+#my_exp>.card>section>.icon{
+    height: 50px;
+    width: 50px;
+
+    margin-right: 10px;
+
+    background-color: aliceblue;
+}
+
+#my_exp>:nth-child(2)>section>.icon{
+    background: url(../imgs/waiter-svgrepo-com.svg) no-repeat center center;
+    background-size: cover;
+}
+
+#my_exp>:nth-child(3)>section>.icon{
+    background: url(../imgs/cashier-machine-cashier-svgrepo-com.svg) no-repeat center center;
+    background-size: cover;
+}
+
+.text_page3{
+    display: none;
+    opacity: 0;
+}
+
+/* About me section settings */
+
+#about_me{
+    height: 500px;
+
+    margin: 100px 0;
+}
+
+#about_me>.content{
+    display: flex;
+    flex-flow: row;
+    align-items: start;
+    justify-content: center;
+}
+
+#about_me>.content>#image_border{
+    height: 300px;
+    width: 300px;
+
+    margin-right: 50px;
+
+    transition: .5s;
+}
+
+#about_me>.content>#image_border>#image{
+    height: 300px;
+    width: 300px;
+
+    position: relative;
+    top: 0%;
+
+    background: url(../imgs/Group\ 1000015845.png) no-repeat center center;
+    background-size: cover;
+
+    border-top: 2px solid black;
+
+    transition: .5s;
+}
+
+#text_page4{
+    height: 100%;
+    width: 40%;
+
+    display: flex;
+    flex-flow: column;
+    align-items: start;
+    justify-content: space-around;
+
+    transition: .5s;
+} #text_page4>h1{
+    font-size: 2em;
+    transition: .5s;
+} #text_page4>p{
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.651);
+    transition: .5s;
+}
+
+
+/* section my projects */
+
+#sec_mpro{
+    height: auto;
+    padding: 50px 20px;
+
+    color: white;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    background-color: black;
+}
+
+#sec_mpro>h1{
+    color: rgb(194, 194, 194);
+    font-size: 3em;
+    font-weight: 100;
+} #sec_mpro>h1>strong{
+    color: white;
+    font-weight: 900;
+}
+
+
+@media (min-width:100px) and (max-width:600px){
+    #name{
+        font-size: 1.5em;
+    }
+
+    #my_skills{
+        display: none;
+    }
+
+    main>:first-child{
+        margin: 70px 0 50px 0;
+    }
+
+    #curriculo_menu{
+        height: 50px;
+        width: 50px;
+
+        animation: curriculo 2s infinite;
+
+    } #curriculo_menu>a{
+        display: none;
+    } #curriculo_menu>div{
+        height: 15px;
+        width: 15px;
+    }
+
+    #title_page1{
+        font-size: 2rem;
+    }
+
+    #text_page1{
+        font-size: 1rem;
+    }
+
+    #banner{
+        opacity: 0.4;
+    }
+
+    #curriculo_menu>.content>section{
+        flex-flow: row nowrap;
+    }
+
+    .hab {
+        height: 120px;
+        width: 90px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hab>.img{
+        height: 90px;
+        width: 90px;
+
+        margin: 0px;
+
+        background-size: cover;
+    }
+
+    .hab>.text{
+        display: none;
+    }
+
+    #about_me>.content{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+
+    #about_me>.content>#image_border{
+        height: 300px;
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #about_me>.content>#image_border>#image{
+        height: 300px;
+        width: 300px;
+    
+        position: relative;
+        top: 0%;
+    
+        background: url(../imgs/Group\ 1000015845.png) no-repeat center center;
+        background-size: cover;
+    }
+
+    #text_page4{
+        height: 100%;
+        width: 80%;
+
+        margin: 50px;
+    
+        display: flex;
+        flex-flow: column;
+    } #text_page4>p{
+        margin: 30px 0;
+    }
+
+}
+
+@media screen and (min-width: 700px){
+    #ban_dad{
+        width: 500px;
+        left: 51%;
+    }
 }
