@@ -3,133 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="statics/styles/reset.css">
     <link rel="stylesheet" href="./statics/styles/style.css">
     <title>Portifólio</title>
 </head>
 <body>
     <header>
-        <ul>
-            <li>
-                <div id="logo">
-
-                </div>
-                <h1 id="name">
-                    Mateus K. Martins
-                </h1>
-            </li>
-            <li>
-                <ul>
-                    <li>
-                        <p>About Me</p>
-                    </li>
-                    <li>
-                        <p>Habilities</p>
-                    </li>
-                    <li>
-                        <p>Projects</p>
-                    </li>
-                    <li>
-                        <p>Contact</p>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <div id="curriculo_menu">
-                    <a href="#">curriculo</a>
-                    <div id="dowload"></div>
-                </div>
-            </li>
-        </ul>
+        <nav aria-label="menu" id="menu">
+            <ul>
+                <li>
+                    <div id="logo">
+    
+                    </div>
+                    <h1 id="name">
+                        Mateus K. Martins
+                    </h1>
+                </li>
+                <li>
+                    <ul>
+                        <li>
+                            <hr id="line_header">
+                            <p>About Me</p>
+                        </li>
+                        <li>
+                            <p>Habilities</p>
+                        </li>
+                        <li>
+                            <p>Projects</p>
+                        </li>
+                        <li>
+                            <p>Contact</p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div id="curriculo_menu">
+                        <a href="#">curriculo</a>
+                        <div id="dowload"></div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <div id="soc_midia">
-            <a href=""><img src="./statics/imgs/instagram-1-svgrepo-com.svg" alt="" id="midia_link"></a>
-            <a href=""><img src="./statics/imgs/facebook-svgrepo-com.svg" alt="" id="midia_link"></a>
-            <a href="https://github.com/MateusK-Martins" target="_blank"><img src="./statics/imgs/github-color-svgrepo-com.svg" alt="" id="midia_link"></a>
-        </div>
         <section id="sec_me">
             <div class="content">
-                <h1 id="title_page1">
+                <h1 class="title_page">
                     <strong>Mateus K. Martis</strong>,<br> frontend developer,<br> from <span>Brazil</span>!
                 </h1>
-                <p id="text_page1">
+                <p class="text_page">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum amet, aperiam exercitationem eos eligendi itaque mollitia vitae corporis quasi, sint eaque, laudantium id consectetur nemo. Architecto aperiam quis cumque doloribus?
                 </p>
             </div>
             <div id="ban_dad">
-                <img src="./statics/imgs/Group 1000015839.png" alt="" id="banner">
+                <img src="./statics/imgs/banner.png" alt="" id="banner">
             </div>
         </section>
         <section id="sec_skills">
             <h1>
                 My Skills
             </h1>
-            <div class="content">
-                <section>
+            <section class="content">
+                <div class="row">
                     <div class="hab">
-                        <div class="img"></div>
+                        <img src="./statics/imgs/html.svg" alt="" class="img">
                         <div class="text">
                             <h2>HTML</h2>
                         </div>
                     </div>
                     <div class="hab">
-                        <div class="img"></div>
+                        <img src="./statics/imgs/css.svg" alt="" class="img">
                         <div class="text">
                             <h2>CSS</h2> 
                         </div>
                     </div>
                     <div class="hab">
-                        <div class="img"></div>
+                        <img src="./statics/imgs/python.svg" alt="" class="img">
                         <div class="text">
                             <h2>Python</h2>
                         </div>
                     </div>
-                </section>
-                <section>
+                </div>
+                <div class="row">
                     <div class="hab">
-                        <div class="img"></div>
+                        <img src="./statics/imgs/js.svg" alt="" class="img">
                         <div class="text">
                             <h2>JavaScript</h2>  
                         </div>
                     </div>
                     <div class="hab">
-                        <div class="img"></div>
+                        <img src="./statics/imgs/ai.svg" alt="" class="img">
                         <div class="text">
                             <h2>Linear Regression</h2>
                         </div>
                     </div>
                     <div class="hab">
-                        <div class="img"></div>
+                        <img src="./statics/imgs/rust.svg" alt="" class="img">
                         <div class="text">
                             <h2>Rust</h2>
                         </div>
                     </div>
-                </section>
+                </div>
             </div>
         </section>
         <section id="my_exp">
-            <div class="title_page3">
-                <h1>My <strong>experience</strong></h1>
-            </div>
+            <h1>My <strong>experience</strong></h1>
             <div class="card">
-                <section>
-                    <div class="icon"></div>
+                <div class="top">
+                    <img src="./statics/imgs/waiter.svg" alt="" class="icon">
                     <h1>
                         Waiter 
                     </h1>
-                </section>
-                <p class="text_page3">
+                </div>
+                <p class="text_page">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, maxime inventore. Eaque totam pariatur animi. Maiores illum quis inventore vitae esse dolorem laborum consectetur quo molestiae aut, aperiam consequuntur quam.
                 </p>
             </div>
             <div class="card">
-                <section>
-                    <div class="icon"></div>
+                <div class="top">
+                    <img src="./statics/imgs/cashier.svg" alt="" class="icon">
                     <h1>
                         cashier
                     </h1>
-                </section>
-                <p class="text_page3">
+                </div>
+                <p class="text_page">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, maxime inventore. Eaque totam pariatur animi. Maiores illum quis inventore vitae esse dolorem laborum consectetur quo molestiae aut, aperiam consequuntur quam.
                 </p>
             </div>
@@ -137,11 +134,9 @@
         <section id="about_me">
             <section class="content">
                 <div id="image_border">
-                    <div id="image">
-
-                    </div>
+                    <img src="./statics/imgs/student.png" alt="" class="image">
                 </div>
-                <div id="text_page4">
+                <div class="text_page">
                     <h1>About me</h1>
                     <p>
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor aut quasi esse, sunt temporibus repudiandae, explicabo consequatur veniam voluptate quae eius soluta quos deserunt ad, perferendis numquam ut facilis inventore.
@@ -157,17 +152,105 @@
                 My <strong>projects</strong>
             </h1>
             <section class="project">
-                <img src="" alt="" class="image">
-                <div>
+                <img src="./statics/imgs/rust.svg" alt="" class="image">
+                <div class="text_projects">
                     <h1>01</h1>
-                    <h2>Rust backend</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam nihil officia aspernatur nobis nostrum, voluptatibus ratione quos voluptas dolor ut commodi deserunt repudiandae perferendis rerum quam. Consequatur, minima! Dolor, distinctio!
-                    </p>
-                    <a href="">link do projeto</a>
+                    <section>
+                        <h2>Rust backend</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam nihil officia aspernatur nobis nostrum, voluptatibus ratione quos voluptas dolor ut commodi deserunt repudiandae perferendis rerum quam. Consequatur, minima! Dolor, distinctio!
+                        </p>
+                        <a href=""><img src="./statics/imgs/link.svg" alt=""></a>
+                    </section>
+                </div>
+            </section>
+            <section class="project">
+                <img src="./statics/imgs/python.svg" alt="" class="image">
+                <div class="text_projects">
+                    <h1>02</h1>
+                    <section>
+                        <h2>Rust backend</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam nihil officia aspernatur nobis nostrum, voluptatibus ratione quos voluptas dolor ut commodi deserunt repudiandae perferendis rerum quam. Consequatur, minima! Dolor, distinctio!
+                        </p>
+                        <a href=""><img src="./statics/imgs/link.svg" alt=""></a>
+                    </section>
                 </div>
             </section>
         </section>
+        <section id="my_testi">
+            <h1>My <strong>Testimonial</strong></h1>
+            <section id="persons">
+                <div class="testimonial">
+                    <img src="./statics/imgs/person-holding-a-glass-of-milk-svgrepo-com.svg" alt="">
+                    <a href=""><img src="./statics/imgs/quotation-right-mark-svgrepo-com.svg" alt="" class="person_link"></a>
+                    <div class="my_testi_text">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, quas reiciendis odio iure quo impedit eius. Amet laudantium dicta quia porro qui sunt, nemo optio vitae, eum molestiae veritatis autem.
+                        </p>
+                        <hr>
+                        <h2>Evren Shah</h2>
+                        <h3>designer</h3>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <img src="./statics/imgs/person-holding-a-glass-of-milk-svgrepo-com.svg" alt="">
+                    <a href=""><img src="./statics/imgs/quotation-right-mark-svgrepo-com.svg" alt="" class="person_link"></a>
+                    <div class="my_testi_text">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, quas reiciendis odio iure quo impedit eius. Amet laudantium dicta quia porro qui sunt, nemo optio vitae, eum molestiae veritatis autem.
+                        </p>
+                        <hr>
+                        <h2>Evren Shah</h2>
+                        <h3>designer</h3>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <img src="./statics/imgs/person-holding-a-glass-of-milk-svgrepo-com.svg" alt="">
+                    <a href=""><img src="./statics/imgs/quotation-right-mark-svgrepo-com.svg" alt="" class="person_link"></a>
+                    <div class="my_testi_text">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, quas reiciendis odio iure quo impedit eius. Amet laudantium dicta quia porro qui sunt, nemo optio vitae, eum molestiae veritatis autem.
+                        </p>
+                        <hr>
+                        <h2>Evren Shah</h2>
+                        <h3>designer</h3>
+                    </div>
+                </div>
+            </section>
+            <section id="thanks">
+                <div id="social_midia">
+                    <a href=""><img src="./statics/imgs/face.svg" alt=""></a>
+                    <a href=""><img src="./statics/imgs/github.svg" alt=""></a>
+                    <a href=""><img src="./statics/imgs/instagram.svg" alt=""></a>
+                </div>
+                <div class="text_page">
+                    <h1>
+                        Let's <strong>talk</strong> for <br> special Something
+                    </h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero in provident odio dolorem at laborum molestias, nam voluptatum vero optio fugiat rerum sunt asperiores, error, placeat voluptas ad rem ut!
+                    </p>
+                    <h2>
+                        Teteukm12345@gmail.com <br>
+                        48 99625-6025
+                    </h2>
+                </div>
+            </section>
+        </section>
+        <footer>
+            <div class="logo">
+                <img src="./statics/imgs/logo 1.png" alt="">
+                <h1>Mateus K. Martins</h1>
+            </div>
+    
+            <div class="time">
+                <h2>@2024-2025 Mateus</h2>
+                <h3>Made in Unibave</h3>
+            </div>
+        </footer>
     </main>
 </body>
 </html>
+
+<!-- dialog -->
